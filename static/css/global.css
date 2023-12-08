@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+/*****
+      ****/
+
+*,
+*::before,
+*::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*outline: 1px solid limegreen !important;*/
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: #ff9301;
+}
+
+::-webkit-scrollbar-track
+{
+    background-color: #000;
+}
+
+/*****
+      ****/
+
+::-moz-selection {
+    color: #fff;
+    background: #0D1282;
+}
+
+::selection {
+    color: #fff;
+    background: #0D1282;
+}
+
+/*****
+      ****/
+
+html { scroll-behavior: smooth; }
+
+body
+{
+    line-height: 1.5;
+    font-family: 'Tilt Neon', cursive;
+}
+
+a,
+img,
+span,
+iframe,
+button
+{
+    display: block;
+}
+
+a
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+img { height: auto; }
+
+input,
+button
+{
+    border: none;
+    font: inherit;
+    color: inherit;
+    background: none;
+}
+
+input { width: 100%; }
+
+button
+{
+    cursor: pointer;
+    text-align: left;
+}
+
+li { list-style: none; }

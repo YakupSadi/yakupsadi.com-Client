@@ -1,0 +1,544 @@
+:root
+{
+    --orange: #ff9301;
+    --padding: 3rem 1rem;
+
+    --title-size: 1.8rem;
+
+    --bg-color: #000;
+    --bg-color-2: #0e0e17;
+
+    --text-color: #fff;
+    --text-color-2: rgba(255, 255, 255, 0.733);
+}
+
+
+/*****
+      Header
+            ****/
+
+
+#header
+{
+    z-index: 2;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    position: absolute;
+}
+
+#header > .logo
+{
+    width: 4rem;
+    padding: .5rem;
+    background-color: var( --orange );
+}
+
+#header > .logo > img
+{
+    width: 100%;
+}
+
+/***** ****/
+
+#header > .email
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc( 100vw - 4rem );
+}
+
+#header > .email > span
+{
+    color: var( --text-color-2 );
+}
+
+
+/*****
+      Section Intro
+                   ****/
+
+
+#section_intro
+{
+    height: 100vh;
+    display: flex;
+    background-color: var( --bg-color );
+}
+
+#section_intro > .text
+{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 0 2rem;
+    flex-direction: column;
+    justify-content: center;
+    transition: padding .5s ease;
+    background-color: rgba( 0, 0, 0, 0.671 );
+}
+
+#section_intro > .text > h1
+{
+    font-size: 2.5rem;
+    letter-spacing: .1rem;
+    color: var( --text-color );
+    transition: font-size .5s ease;
+}
+
+#section_intro > .text > span:nth-of-type( 1 )
+{
+    font-size: 1.4rem;
+    color: var( --text-color );
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-color: var( --orange );
+    -webkit-text-decoration-color: var( --orange );
+}
+
+#section_intro > .text > span:nth-of-type( 2 )
+{
+    max-width: 35rem;
+    font-size: 1.2rem;
+    word-wrap: break-word;
+    color: var( --text-color-2 );
+}
+
+#section_intro > .text > .text_loop
+{
+    height: 2rem;
+    color: #000;
+    width: 14rem;
+    padding: 0 .5rem;
+    overflow: hidden;
+    font-size: 1.4rem;
+    position: relative;
+    border-radius: .5rem;
+    margin: .4rem 0 .7rem;
+    background-color: var( --orange );
+}
+
+#section_intro > .text > .text_loop > span
+{
+    position: absolute;
+    animation: .5s linear forwards;
+}
+
+#section_intro > .text > .text_loop > span:not( :first-of-type )
+{
+    top: 2.5rem;
+}
+
+/***** ****/
+
+@keyframes move_up
+{
+    from
+    {
+        top: 2.7rem;
+    }
+    to
+    {
+        top: 0;
+    } 
+}
+
+@keyframes move_upper
+{
+    from
+    {
+        top: 0;
+    }
+    to
+    {
+        top: -2.7rem;
+    } 
+}
+
+/***** ****/
+
+#section_intro > .bg_image
+{
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    transition: width .5s ease;
+}
+
+#section_intro > .bg_image > img
+{
+    width: 100%;
+    height: 100%;
+}
+
+/*****
+      Section Biography
+                       ****/
+
+
+#section_biography
+{
+    width: 100%;
+    padding: var( --padding );
+    background-color: var( --bg-color-2 );
+}
+
+#section_biography > .image_side
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/***** ****/
+
+#section_biography > .image_side > .image_box
+{
+    position: relative;
+}
+
+/***** ****/
+
+#section_biography > .image_side > .image_box > .image
+{
+    aspect-ratio: 1;
+    overflow: hidden;
+    max-width: 21rem;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    border: .3rem solid var( --orange );
+}
+
+#section_biography > .image_side > .image_box > .image > img
+{
+    width: 100%;
+}
+
+/***** ****/
+
+#section_biography > .image_side > .image_box > .social
+{
+    width: 100%;
+    bottom: .8rem;
+    position: absolute;
+}
+
+#section_biography > .image_side > .image_box > .social > ul
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+#section_biography > .image_side > .image_box > .social > ul > li:nth-child( 2 )
+{
+    margin-top: 2.5rem;
+}
+
+#section_biography > .image_side > .image_box > .social > ul > li > a
+{
+    padding: .6rem;
+    border-radius: 50%;
+    border: 3px solid #ff9301;
+    background-color: var( --bg-color );
+}
+
+#section_biography > .image_side > .image_box > .social > ul > li > a > span > svg
+{
+    height: 1em;
+    display: flex;
+    font-size: 1.4rem;
+}
+
+#section_biography > .image_side > .image_box > .social > ul > li > a > img
+{
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+/***** ****/
+
+#section_biography > .text_side
+{
+    width: 100%;
+}
+
+#section_biography > .text_side > .border > img
+{
+    width: 100%;
+    height: 1rem;
+}
+
+/***** ****/
+
+#section_biography > .text_side > .title > h2
+{
+    margin: 2rem 0 1rem;
+    color: var( --text-color );
+    font-size: var( --title-size );
+}
+
+/***** ****/
+
+#section_biography > .text_side > .text > span
+{
+    font-size: 1.2rem;
+    word-wrap: break-word;
+    color: var( --text-color-2 );
+}
+
+/***** ****/
+
+#section_biography > .image_side > .text
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-direction: column;
+}
+
+#section_biography > .image_side > .text > span:nth-child( 1 )
+{
+    font-size: 1.1rem;
+    color: var( --text-color-2 );
+}
+
+#section_biography > .image_side > .text > span:nth-child( 2 )
+{
+    color: var( --text-color );
+    font-size: var( --title-size );
+}
+
+
+/*****
+      Section What I Do
+                       ****/
+
+
+#section_what_i_do
+{
+    padding: var( --padding );
+    background-color: var( --bg-color );
+}
+
+#section_what_i_do > .title > h2
+{
+    text-align: center;
+    color: var( --text-color );
+    font-size: var( --title-size );
+}
+
+/***** ****/
+
+#section_what_i_do > .box_list
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/***** ****/
+
+#section_what_i_do > .box_list > .box
+{
+    z-index: 1;
+    width: 100%;
+    margin: 1rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 1rem;
+    padding: 3rem 2.5rem;
+    color: var( --text-color );
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    background-color: var( --bg-color-2 );
+}
+
+#section_what_i_do > .box_list > .box > span
+{
+    font-size: 1.3rem;
+}
+
+#section_what_i_do > .box_list > .box > .svg,
+#section_what_i_do > .box_list > .box > img
+{
+    width: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+#section_what_i_do > .box_list > .box > .circle
+{
+    top: -4rem;
+    z-index: -1;
+    left: -2rem;
+    width: 12rem;
+    height: 12rem;
+    position: absolute;
+    border-radius: 50% 50%;
+    border: 3px solid #fff;
+    transition: top .5s ease,
+                width .5s ease;
+    background-color: var( --orange );
+}
+
+#section_what_i_do > .box_list > .box:hover > .circle
+{
+    top: 7rem;
+    width: 130%;
+}
+
+
+/*****
+      Section Skills
+                    ****/
+
+
+#section_skills
+{
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    padding: var( --padding );
+    background-color: var( --bg-color-2 );
+}
+
+#section_skills > .container > .box
+{
+    width: 200%;
+    margin: 1rem 0;
+    display: inline-block;
+}
+
+#section_skills > .container:nth-child( 2n + 1 ) > .box
+{
+    animation: 8s skill_loop infinite linear;
+}
+
+#section_skills > .container:nth-child( 2n ) > .box
+{
+    animation: 8s skill_loop_rev infinite linear;
+}
+
+/***** ****/
+
+#section_skills > .container > .box > .item
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+/***** ****/
+
+#section_skills > .container > .box > .item > .image
+{
+    width: 6rem;
+    margin: 0 1rem;
+    padding: .5rem;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+#section_skills > .container > .box > .item > .image > img
+{
+    width: 100%;
+}
+
+/***** ****/
+
+@keyframes skill_loop
+{
+    from
+    {
+        transform: translateX( 0 );
+    }
+    to
+    {
+        transform: translateX( -100% );
+    } 
+}
+
+@keyframes skill_loop_rev
+{
+    from
+    {
+        transform: translateX( -100% );
+    }
+    to
+    {
+        transform: translateX( 0 );
+    } 
+}
+
+
+/*****
+      Section Portfolio
+            ****/
+
+
+#section_portfolio
+{
+    padding: var( --padding );
+    background-color: var( --bg-color );
+}
+
+#section_portfolio > .title > h2
+{
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var( --text-color );
+    font-size: var( --title-size );
+}
+
+/***** ****/
+
+#section_portfolio > .project_list
+{
+    gap: 2rem;
+    display: grid;
+    grid-auto-rows: auto;
+}
+
+/***** ****/
+
+#section_portfolio > .project_list > .item > a:nth-child( 1 )
+{
+    border-radius: .3rem;
+    border: .3rem solid #fff;
+}
+
+#section_portfolio > .project_list > .item > a > img
+{
+    width: 100%;
+    aspect-ratio: 2 / 1;
+}
+
+#section_portfolio > .project_list > .item > a:nth-child( 2 ) > h3
+{
+    margin-top: .5rem;
+    text-align: center;
+    color: var( --text-color );
+}
+
+
+/*****
+      Footer
+            ****/
+
+
+#footer
+{
+    padding: .5rem;
+    text-align: center;
+    background-color: var( --orange );
+}
+
+#footer > span
+{
+    font-size: .8rem;
+}

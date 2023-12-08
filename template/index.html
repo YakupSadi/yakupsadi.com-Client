@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+        Favicon
+    -->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+
+    <!--
+        Font Awesome
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--
+        Css
+    -->
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/global.css">
+    <link rel="stylesheet" href="../static/css/responsive.css">
+
+    <!--
+        Title
+    -->
+    <title>Yakup Sadi</title>
+</head>
+<body x-init="$store.dataStore.getData()">
+    <header id="header">
+        <div class="logo">
+            <img src="../assets/logo.png" alt="Logo">
+        </div>
+
+        <div class="email">
+            <span x-text="$store.dataStore.about.email"></span>
+        </div>
+    </header>
+
+
+    <!--
+        Section Intro
+    -->
+    <div id="section_intro">
+        <div class="text">
+            <span>Hello, my name is</span>
+            <h1 x-text="$store.dataStore.about.fullName"></h1>
+
+            <div class="text_loop" id="loop">
+                <span x-text="$store.dataStore.about.firstSkill"></span>
+                <span x-text="$store.dataStore.about.secondSkill"></span>
+                <span x-text="$store.dataStore.about.thirdSkill"></span>
+            </div>
+
+            <span x-text="$store.dataStore.desc.short"></span>
+        </div>
+
+        <div class="bg_image">
+            <img :src=" `http://localhost:3000/api/v1/infoImages/${ $store.dataStore.images.bgImage }` " alt="Yakup Sadi">
+        </div>
+    </div>
+
+
+    <!--
+        Section Biography
+    -->
+    <div id="section_biography">
+        <div class="image_side">
+            <div class="image_box">
+                <div class="image">
+                    <img :src=" `http://localhost:3000/api/v1/infoImages/${ $store.dataStore.images.image }` " alt="Yakup Sadi">
+                </div>
+
+                <div class="social">
+                    <ul>
+                        <li>
+                            <a :href="$store.dataStore.infoInp[ 0 ]">
+                                <template x-if="$store.dataStore.infoSts[ 0 ]">
+                                    <span x-html="$store.dataStore.infoOpt[ 0 ]"></span>
+                                </template>
+                                <template x-if="!$store.dataStore.infoSts[ 0 ]">
+                                    <img :src=" `http://localhost:3000/api/v1/addIcon/${ $store.dataStore.infoOpt[ 0 ] }` " alt="Icon">
+                                </template>
+                            </a>
+                        </li>
+                        <li>
+                            <a :href="$store.dataStore.infoInp[ 1 ]">
+                                <template x-if="$store.dataStore.infoSts[ 1 ]">
+                                    <span x-html="$store.dataStore.infoOpt[ 1 ]"></span>
+                                </template>
+                                <template x-if="!$store.dataStore.infoSts[ 1 ]">
+                                    <img :src=" `http://localhost:3000/api/v1/addIcon/${ $store.dataStore.infoOpt[ 1 ] }` " alt="Icon">
+                                </template>
+                            </a>
+                        </li>
+                        <li>
+                            <a :href="$store.dataStore.infoInp[ 2 ]">
+                                <template x-if="$store.dataStore.infoSts[ 2 ]">
+                                    <span x-html="$store.dataStore.infoOpt[ 2 ]"></span>
+                                </template>
+                                <template x-if="!$store.dataStore.infoSts[ 2 ]">
+                                    <img :src=" `http://localhost:3000/api/v1/addIcon/${ $store.dataStore.infoOpt[ 2 ] }` " alt="Icon">
+                                </template>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text">
+                <span x-text="$store.dataStore.about.title"></span>
+                <span x-text="$store.dataStore.about.fullName"></span>
+            </div>
+        </div>
+
+        <div class="text_side">
+            <div class="border">
+                <img src="../assets/border.png" alt="Border">
+            </div>
+
+            <div class="title">
+                <h2>Who Am I ?</h2>
+            </div>
+
+            <div class="text">
+                <span x-text="$store.dataStore.desc.long"></span>
+            </div>
+        </div>
+    </div>
+
+
+    <!--
+        Section What I Do
+    -->
+    <div id="section_what_i_do">
+        <div class="title">
+            <h2>What I Do ?</h2>
+        </div>
+
+        <div class="box_list">
+            <div class="box">
+                <div class="circle"></div>
+
+                <template x-if="$store.dataStore.infoSts[ 3 ]">
+                    <span class="svg" x-html="$store.dataStore.infoOpt[ 3 ]"></span>
+                </template>
+                <template x-if="!$store.dataStore.infoSts[ 3 ]">
+                    <img :src=" `http://localhost:3000/api/v1/addIcon/${ $store.dataStore.infoOpt[ 3 ] }` " alt="Icon">
+                </template>
+
+                <span x-text="$store.dataStore.infoInp[ 3 ] ? $store.dataStore.infoInp[ 3 ] : 'Data not available'"></span>
+            </div>
+
+            <div class="box">
+                <div class="circle"></div>
+
+                <template x-if="$store.dataStore.infoSts[ 4 ]">
+                    <span class="svg" x-html="$store.dataStore.infoOpt[ 4 ]"></span>
+                </template>
+                <template x-if="!$store.dataStore.infoSts[ 4 ]">
+                    <img :src=" `http://localhost:3000/api/v1/addIcon/${ $store.dataStore.infoOpt[ 4 ] }` " alt="Icon">
+                </template>
+
+                <span x-text="$store.dataStore.infoInp[ 4 ] ? $store.dataStore.infoInp[ 4 ] : 'Data not available'"></span>
+            </div>
+
+            <div class="box">
+                <div class="circle"></div>
+
+                <template x-if="$store.dataStore.infoSts[ 5 ]">
+                    <span class="svg" x-html="$store.dataStore.infoOpt[ 5 ]"></span>
+                </template>
+                <template x-if="!$store.dataStore.infoSts[ 5 ]">
+                    <img :src=" `http://localhost:3000/api/v1/addIcon/${ $store.dataStore.infoOpt[ 5 ] }` " alt="Icon">
+                </template>
+
+                <span x-text="$store.dataStore.infoInp[ 5 ] ? $store.dataStore.infoInp[ 5 ] : 'Data not available'"></span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--
+        Section Skills
+    -->
+    <div id="section_skills">
+        <template x-for="line in $store.dataStore.lines">
+            <div class="container">
+                <template x-for="box in 2">
+                    <div class="box">
+                        <div class="item">
+                            <template x-for="item in $store.dataStore.items">
+                                <div class="image" x-show="item.random === line.random">
+                                    <img :src=" `http://localhost:3000/api/v1/skills/${ item.image }` " alt="Lang">
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </template>
+    </div>
+
+
+    <!--
+        Section Portfolio
+    -->
+    <div id="section_portfolio">
+        <div class="title">
+            <h2>Portfolio.</h2>
+        </div>
+
+        <div class="project_list">
+            <template x-for="work in $store.dataStore.works">
+                <div class="item">
+                    <a :href="work.url">
+                        <img :src=" `http://localhost:3000/api/v1/portfolio/${ work.imgPath }` " :alt="work.baseURL">
+                    </a>
+                    <a :href="work.url">
+                        <h3 x-text="work.baseURL"></h3>
+                    </a>
+                </div>
+            </template>
+        </div>
+    </div>
+
+
+    <!--
+        Footer
+    -->
+    <footer id="footer">
+        <span>© 2023 Copyright. All Rights Reserved.</span>
+    </footer>
+
+
+    <!--
+        Script
+    -->
+    <script src="../static/js/loop.js"></script>
+    <script src="../static/js/alpineStore.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+:root
+{
+    --padding-1: 3rem;
+    --padding-2: 3rem 5rem;
+}
+
+
+/*****
+    Media
+****/
+
+
+@media ( min-width: 36em )
+{
+/*****
+    Section Header
+****/
+
+    #header > .email
+    {
+        padding-left: 3rem;
+        justify-content: left;
+    }
+
+/*****
+    Sections Intro
+****/
+
+    #section_intro > .text
+    {
+        padding-left: 5rem;
+    }
+
+    #section_intro > .text > h1
+    {
+        font-size: 4rem;
+    }
+
+    #section_intro > .text > .text_loop
+    {
+        width: 16rem;
+        height: 2.5rem;
+        font-size: 1.6rem;
+        margin: .5rem 0 1.5rem;
+    }
+
+/*****
+    Section Biography
+****/
+
+    #section_biography
+    {
+        padding: var( --padding-1 );
+    }
+
+/*****
+    Section What I Do
+****/
+
+    #section_what_i_do
+    {
+        padding: var( --padding-1 );
+    }
+
+/*****
+      Section Portfolio
+****/
+
+    #section_portfolio
+    {
+        padding: var( --padding-1 );
+    }
+
+/*****
+      Skills Portfolio
+****/
+
+    #section_skills > .container:nth-child( 2n + 1 ) > .box
+    {
+        animation: 20s skill_loop infinite linear;
+    }
+
+    #section_skills > .container:nth-child( 2n ) > .box
+    {
+        animation: 20s skill_loop_rev infinite linear;
+    }
+}
+
+
+@media ( min-width: 48em )
+{
+/*****
+    Sections Intro
+****/
+
+    #section_intro > .text
+    {
+        padding-left: 11rem;
+    }
+
+/*****
+    Section Biography
+****/
+
+    #section_biography
+    {
+        padding: var( --padding-2 );
+    }
+
+/*****
+    Section What I Do
+****/
+
+    #section_what_i_do > .box_list > .box
+    {
+        width: 18rem;
+    }
+
+/*****
+    Section Skills
+****/
+
+    #section_skills > .container > .box
+    {
+        width: 100%;
+    }
+
+/*****
+    Section Portfolio
+****/
+
+    #section_portfolio > .project_list
+    {
+        grid-template-columns: repeat( 2, 1fr );
+    }
+}
+
+
+@media ( min-width: 62em )
+{
+/*****
+    Sections Intro
+****/
+
+    #section_intro > .bg_image
+    {
+        width: 45rem;
+    }
+
+    #section_intro > .text
+    {
+        width: 45rem;
+        padding-left: 14rem;
+        background-color: transparent;
+    }
+
+    #section_intro > .text > h1
+    {
+        font-size: 5rem;
+    }
+
+/*****
+    Section Biography
+****/
+
+    #section_biography
+    {
+        display: flex;
+    }
+
+    #section_biography > .image_side > .text
+    {
+        margin-bottom: 0;
+    }
+
+/*****
+    Section What I Do
+****/
+
+    #section_what_i_do
+    {
+        padding: var( --padding-2 );
+    }
+
+    #section_what_i_do > .box_list > .box
+    {
+        width: 20rem;
+    }
+
+/*****
+    Section Portfolio
+****/
+
+    #section_portfolio
+    {
+        padding: var( --padding-2 );
+    }
+}
