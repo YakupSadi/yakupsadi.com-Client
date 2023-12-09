@@ -241,7 +241,7 @@
 
 #section_biography > .image_side > .image_box > .social > ul > li > a
 {
-    padding: .6rem;
+    padding: .5rem;
     border-radius: 50%;
     border: 3px solid #ff9301;
     background-color: var( --bg-color );
@@ -249,9 +249,7 @@
 
 #section_biography > .image_side > .image_box > .social > ul > li > a > span > svg
 {
-    height: 1em;
     display: flex;
-    font-size: 1.4rem;
 }
 
 #section_biography > .image_side > .image_box > .social > ul > li > a > img
